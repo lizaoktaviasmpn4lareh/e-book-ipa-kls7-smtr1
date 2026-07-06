@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 2 - Zat dan Perubahannya | IPA Kelas 7 Kurikulum Merdeka</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f4f7fa;
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            background: linear-gradient(135deg, #1a5276, #2e86c1);
+            padding: 15px 20px;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .top-nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-nav .brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .top-nav .links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .top-nav .links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: opacity 0.3s;
+        }
+
+        .top-nav .links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #eaf2f8;
+            padding: 12px 20px;
+            font-size: 0.9rem;
+            color: #555;
+            border-bottom: 1px solid #d4e6f1;
+        }
+
+        .breadcrumb a {
+            color: #2e86c1;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Chapter Header */
+        .chapter-header {
+            background: linear-gradient(135deg, #1a5276 0%, #2e86c1 50%, #48c9b0 100%);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .chapter-header .chapter-label {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .chapter-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        .chapter-header .description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 25px 20px;
+            background: #fff;
+            border-bottom: 1px solid #e8e8e8;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .action-buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-home {
+            background: #1a5276;
+            color: #fff;
+        }
+
+        .btn-home:hover {
+            background: #0e2f44;
+            transform: translateY(-2px);
+        }
+
+        .btn-quiz {
+            background: #f39c12;
+            color: #fff;
+        }
+
+        .btn-quiz:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+        }
+
+        .btn-next {
+            background: #27ae60;
+            color: #fff;
+        }
+
+        .btn-next:hover {
+            background: #229954;
+            transform: translateY(-2px);
+        }
+
+        /* Content */
+        .content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .content h2 {
+            color: #1a5276;
+            font-size: 1.6rem;
+            margin: 35px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #2e86c1;
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content h3 {
+            color: #2e86c1;
+            font-size: 1.25rem;
+            margin: 25px 0 12px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #444;
+        }
+
+        .content ul, .content ol {
+            margin: 15px 0 15px 25px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .content strong {
+            color: #1a5276;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, #eaf2f8, #d4efdf);
+            border-left: 5px solid #2e86c1;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .info-box h4 {
+            color: #1a5276;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .info-box ul {
+            margin-left: 20px;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background: #fef9e7;
+            border-left: 5px solid #f39c12;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #7d6608;
+        }
+
+        /* Exam Tips */
+        .exam-tips {
+            background: linear-gradient(135deg, #fef9e7, #fdebd0);
+            border: 2px solid #f39c12;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .exam-tips h3 {
+            color: #e67e22;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .exam-tips ul {
+            margin-left: 20px;
+        }
+
+        .exam-tips li {
+            margin-bottom: 10px;
+        }
+
+        /* Table */
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .content table th {
+            background: linear-gradient(135deg, #1a5276, #2e86c1);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .content table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .content table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .content table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            max-width: 1000px;
+            margin: 0 auto 40px;
+            padding: 25px 40px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .bottom-nav a {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        /* Footer */
+        footer {
+            background: #0e2f44;
+            color: #ccc;
+            padding: 40px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-section a:hover {
+            color: #f39c12;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .chapter-header h1 {
+                font-size: 1.7rem;
+            }
+
+            .content {
+                padding: 25px 20px;
+                margin: 20px 15px;
+            }
+
+            .content h2 {
+                font-size: 1.3rem;
+            }
+
+            .bottom-nav {
+                flex-direction: column;
+                margin: 0 15px 20px;
+                padding: 20px;
+            }
+
+            .bottom-nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="brand">📘 IPA Kelas 7 Kurikulum Merdeka</div>
+            <div class="links">
+                <a href="index.html">Beranda</a>
+                <a href="index.html#tentang">Tentang Buku</a>
+                <a href="index.html#bab">Daftar Bab</a>
+                <a href="index.html#penulis">Penulis</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">🏠 Beranda</a> &nbsp;|&nbsp;
+        <a href="index.html#bab">📖 Daftar Bab</a> &nbsp;|&nbsp;
+        <strong>Bab 2</strong>
+    </div>
+
+    <!-- Chapter Header -->
+    <section class="chapter-header">
+        <span class="chapter-label">BAB 2</span>
+        <h1>Zat dan Perubahannya</h1>
+        <p class="description">
+            Mempelajari karakteristik zat berdasarkan wujudnya (padat, cair, gas), sifat fisika dan kimia, 
+            perubahan wujud zat, serta pemisahan campuran dalam kehidupan sehari-hari.
+        </p>
+    </section>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <a href="index.html" class="btn-home">🏠 Beranda</a>
+        <a href="uji-formatif-2.html" class="btn-quiz">📝 Uji Formatif Bab 2</a>
+        <a href="3.html" class="btn-next">Bab Selanjutnya →</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <p>
+            Selamat datang di <strong>Bab 2 - Zat dan Perubahannya</strong>! 
+            Pada bab ini, kalian akan mempelajari segala sesuatu yang ada di alam semesta ini tersusun dari zat. 
+            Zat memiliki berbagai wujud, sifat, dan dapat mengalami perubahan. Pemahaman tentang zat sangat penting 
+            karena berkaitan langsung dengan kehidupan sehari-hari, mulai dari makanan yang kita konsumsi, 
+            udara yang kita hirup, hingga bahan-bahan yang kita gunakan.
+        </p>
+
+        <h2>A. Pengertian Zat</h2>
+
+        <p>
+            <strong>Zat (materi)</strong> adalah segala sesuatu yang memiliki <strong>massa</strong> dan 
+            <strong>menempati ruang</strong>. Semua benda yang ada di sekitar kita, baik yang dapat dilihat 
+            maupun tidak dapat dilihat, tersusun dari zat.
+        </p>
+
+        <div class="info-box">
+            <h4>📌 Ciri-Ciri Zat:</h4>
+            <ul>
+                <li><strong>Memiliki massa</strong> – Dapat diukur dengan neraca (contoh: batu, air, udara)</li>
+                <li><strong>Menempati ruang</strong> – Memiliki volume tertentu</li>
+                <li><strong>Memiliki sifat-sifat tertentu</strong> – Seperti warna, bau, rasa, dan kekerasan</li>
+            </ul>
+        </div>
+
+        <p>
+            Contoh zat dalam kehidupan sehari-hari:
+        </p>
+        <ul>
+            <li><strong>Zat padat:</strong> batu, kayu, besi, emas, gula, garam</li>
+            <li><strong>Zat cair:</strong> air, minyak, susu, bensin, alkohol</li>
+            <li><strong>Zat gas:</strong> udara, oksigen, karbon dioksida, uap air</li>
+        </ul>
+
+        <h2>B. Wujud Zat dan Sifatnya</h2>
+
+        <p>
+            Zat di alam dapat berada dalam tiga wujud, yaitu <strong>padat, cair, dan gas</strong>. 
+            Setiap wujud zat memiliki sifat yang berbeda-beda.
+        </p>
+
+        <h3>1. Zat Padat</h3>
+        <p>Zat padat adalah zat yang memiliki bentuk dan volume tetap.</p>
+        <p><strong>Ciri-ciri zat padat:</strong></p>
+        <ul>
+            <li>Bentuk tetap (tidak berubah mengikuti wadahnya)</li>
+            <li>Volume tetap</li>
+            <li>Jarak antar partikel sangat rapat</li>
+            <li>Gaya tarik-menarik antar partikel sangat kuat</li>
+            <li>Partikel hanya dapat bergetar di tempat, tidak dapat berpindah</li>
+        </ul>
+        <p><strong>Contoh:</strong> batu, kayu, besi, emas, kaca, meja, kursi</p>
+
+        <h3>2. Zat Cair</h3>
+        <p>Zat cair adalah zat yang memiliki volume tetap tetapi bentuknya berubah mengikuti wadahnya.</p>
+        <p><strong>Ciri-ciri zat cair:</strong></p>
+        <ul>
+            <li>Bentuk berubah-ubah mengikuti wadahnya</li>
+            <li>Volume tetap</li>
+            <li>Jarak antar partikel agak renggang</li>
+            <li>Gaya tarik-menarik antar partikel lebih lemah daripada zat padat</li>
+            <li>Partikel dapat bergerak dan berpindah tempat</li>
+            <li>Mengalir dari tempat tinggi ke tempat rendah</li>
+            <li>Memiliki permukaan yang datar ketika tenang</li>
+        </ul>
+        <p><strong>Contoh:</strong> air, minyak, susu, bensin, alkohol</p>
+
+        <h3>3. Zat Gas</h3>
+        <p>Zat gas adalah zat yang memiliki bentuk dan volume yang berubah-ubah mengikuti wadahnya.</p>
+        <p><strong>Ciri-ciri zat gas:</strong></p>
+        <ul>
+            <li>Bentuk berubah-ubah mengikuti wadahnya</li>
+            <li>Volume berubah-ubah memenuhi seluruh ruang wadah</li>
+            <li>Jarak antar partikel sangat renggang</li>
+            <li>Gaya tarik-menarik antar partikel sangat lemah</li>
+            <li>Partikel bergerak bebas ke segala arah</li>
+            <li>Dapat dimampatkan (dikompresi) dan dikembangkan</li>
+        </ul>
+        <p><strong>Contoh:</strong> udara, oksigen, karbon dioksida, uap air, helium</p>
+
+        <h3>Tabel Perbandingan Wujud Zat:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sifat</th>
+                    <th>Padat</th>
+                    <th>Cair</th>
+                    <th>Gas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Bentuk</strong></td>
+                    <td>Tetap</td>
+                    <td>Mengikuti wadah</td>
+                    <td>Mengikuti wadah</td>
+                </tr>
+                <tr>
+                    <td><strong>Volume</strong></td>
+                    <td>Tetap</td>
+                    <td>Tetap</td>
+                    <td>Mengikuti wadah</td>
+                </tr>
+                <tr>
+                    <td><strong>Jarak Partikel</strong></td>
+                    <td>Sangat rapat</td>
+                    <td>Agak renggang</td>
+                    <td>Sangat renggang</td>
+                </tr>
+                <tr>
+                    <td><strong>Gaya Antar Partikel</strong></td>
+                    <td>Sangat kuat</td>
+                    <td>Lemah</td>
+                    <td>Sangat lemah</td>
+                </tr>
+                <tr>
+                    <td><strong>Pergerakan Partikel</strong></td>
+                    <td>Hanya bergetar</td>
+                    <td>Dapat berpindah</td>
+                    <td>Bebas ke segala arah</td>
+                </tr>
+                <tr>
+                    <td><strong>Dapat dimampatkan</strong></td>
+                    <td>Tidak</td>
+                    <td>Sangat sulit</td>
+                    <td>Mudah</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>C. Partikel Penyusun Zat</h2>
+
+        <p>
+            Zat tersusun dari partikel-partikel yang sangat kecil. Partikel penyusun zat dapat berupa 
+            <strong>atom</strong>, <strong>molekul</strong>, atau <strong>ion</strong>.
+        </p>
+
+        <h3>1. Atom</h3>
+        <p>
+            <strong>Atom</strong> adalah partikel terkecil dari suatu unsur yang masih memiliki sifat unsur tersebut. 
+            Contoh: atom besi (Fe), atom emas (Au), atom oksigen (O).
+        </p>
+
+        <h3>2. Molekul</h3>
+        <p>
+            <strong>Molekul</strong> adalah gabungan dua atom atau lebih yang berikatan secara kimia. 
+            Molekul dibedakan menjadi dua:
+        </p>
+        <ul>
+            <li><strong>Molekul unsur:</strong> gabungan atom-atom sejenis. Contoh: O₂ (oksigen), H₂ (hidrogen)</li>
+            <li><strong>Molekul senyawa:</strong> gabungan atom-atom berbeda jenis. Contoh: H₂O (air), CO₂ (karbon dioksida)</li>
+        </ul>
+
+        <h3>3. Ion</h3>
+        <p>
+            <strong>Ion</strong> adalah atom atau kelompok atom yang memiliki muatan listrik. 
+            Ion dibedakan menjadi dua:
+        </p>
+        <ul>
+            <li><strong>Kation:</strong> ion bermuatan positif. Contoh: Na⁺, Ca²⁺</li>
+            <li><strong>Anion:</strong> ion bermuatan negatif. Contoh: Cl⁻, SO₄²⁻</li>
+        </ul>
+
+        <div class="quote-box">
+            💡 <strong>Tahukah kamu?</strong> Satu tetes air mengandung sekitar 1,67 × 10²¹ molekul air! 
+            Itulah sebabnya partikel zat sangat kecil dan tidak dapat dilihat dengan mata telanjang.
+        </div>
+
+        <h2>D. Perubahan Wujud Zat</h2>
+
+        <p>
+            Zat dapat berubah dari satu wujud ke wujud lainnya melalui proses pemanasan atau pelepasan kalor. 
+            Perubahan wujud zat tidak mengubah susunan kimianya, hanya mengubah susunan partikelnya.
+        </p>
+
+        <h3>Jenis-Jenis Perubahan Wujud Zat:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Perubahan</th>
+                    <th>Nama Proses</th>
+                    <th>Penjelasan</th>
+                    <th>Contoh</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Padat → Cair</td>
+                    <td><strong>Melebur/Mencair</strong></td>
+                    <td>Zat padat berubah menjadi cair karena menyerap kalor</td>
+                    <td>Es mencair, mentega meleleh</td>
+                </tr>
+                <tr>
+                    <td>Cair → Padat</td>
+                    <td><strong>Membeku</strong></td>
+                    <td>Zat cair berubah menjadi padat karena melepaskan kalor</td>
+                    <td>Air menjadi es, lilin cair mengeras</td>
+                </tr>
+                <tr>
+                    <td>Cair → Gas</td>
+                    <td><strong>Menguap</strong></td>
+                    <td>Zat cair berubah menjadi gas karena menyerap kalor</td>
+                    <td>Air mendidih menjadi uap</td>
+                </tr>
+                <tr>
+                    <td>Gas → Cair</td>
+                    <td><strong>Mengembun</strong></td>
+                    <td>Zat gas berubah menjadi cair karena melepaskan kalor</td>
+                    <td>Titik air di gelas dingin</td>
+                </tr>
+                <tr>
+                    <td>Padat → Gas</td>
+                    <td><strong>Menyublim</strong></td>
+                    <td>Zat padat langsung berubah menjadi gas</td>
+                    <td>Kapur barus menguap</td>
+                </tr>
+                <tr>
+                    <td>Gas → Padat</td>
+                    <td><strong>Mengkristal</strong></td>
+                    <td>Zat gas langsung berubah menjadi padat</td>
+                    <td>Terbentuknya salju</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <h4>🌡️ Titik Lebur dan Titik Didih:</h4>
+            <ul>
+                <li><strong>Titik lebur:</strong> Suhu saat zat padat mulai mencair. Contoh: es mencair pada suhu 0°C</li>
+                <li><strong>Titik didih:</strong> Suhu saat zat cair mulai mendidih. Contoh: air mendidih pada suhu 100°C</li>
+                <li>Selama perubahan wujud, <strong>suhu tetap konstan</strong> meskipun terus dipanaskan</li>
+            </ul>
+        </div>
+
+        <h2>E. Sifat Fisika dan Sifat Kimia Zat</h2>
+
+        <h3>1. Sifat Fisika</h3>
+        <p>
+            <strong>Sifat fisika</strong> adalah sifat zat yang dapat diamati tanpa mengubah susunan kimia zat tersebut. 
+            Contoh sifat fisika:
+        </p>
+        <ul>
+            <li><strong>Wujud zat:</strong> padat, cair, gas</li>
+            <li><strong>Warna:</strong> putih, merah, kuning, dll.</li>
+            <li><strong>Bau:</strong> harum, busuk, amis</li>
+            <li><strong>Rasa:</strong> manis, asam, pahit, asin</li>
+            <li><strong>Titik didih:</strong> suhu saat zat mendidih</li>
+            <li><strong>Titik lebur:</strong> suhu saat zat melebur</li>
+            <li><strong>Kelarutan:</strong> kemampuan zat larut dalam pelarut tertentu</li>
+            <li><strong>Kekerasan:</strong> ketahanan zat terhadap goresan</li>
+            <li><strong>Konduktivitas:</strong> kemampuan menghantarkan panas atau listrik</li>
+            <li><strong>Massa jenis:</strong> perbandingan massa dengan volume (kg/m³)</li>
+        </ul>
+
+        <h3>2. Sifat Kimia</h3>
+        <p>
+            <strong>Sifat kimia</strong> adalah sifat zat yang berkaitan dengan kemampuan zat untuk mengalami perubahan kimia 
+            atau bereaksi dengan zat lain. Contoh sifat kimia:
+        </p>
+        <ul>
+            <li><strong>Mudah terbakar:</strong> bensin, kertas, kayu</li>
+            <li><strong>Mudah berkarat (korosi):</strong> besi yang bereaksi dengan oksigen dan air</li>
+            <li><strong>Mudah meledak:</strong> dinamit, gas hidrogen</li>
+            <li><strong>Beracun (toksik):</strong> racun serangga, pestisida</li>
+            <li><strong>Mudah membusuk:</strong> makanan, buah-buahan</li>
+            <li><strong>Reaktivitas:</strong> kemampuan bereaksi dengan zat lain (misalnya natrium bereaksi hebat dengan air)</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>🔍 Perbedaan Sifat Fisika dan Sifat Kimia:</h4>
+            <ul>
+                <li><strong>Sifat fisika:</strong> tidak menghasilkan zat baru (contoh: es mencair tetap menjadi H₂O)</li>
+                <li><strong>Sifat kimia:</strong> menghasilkan zat baru (contoh: besi berkarat menjadi Fe₂O₃)</li>
+            </ul>
+        </div>
+
+        <h2>F. Perubahan Fisika dan Perubahan Kimia</h2>
+
+        <h3>1. Perubahan Fisika</h3>
+        <p>
+            <strong>Perubahan fisika</strong> adalah perubahan zat yang <strong>tidak menghasilkan zat baru</strong>. 
+            Hanya wujud atau bentuknya yang berubah, tetapi susunan kimianya tetap sama.
+        </p>
+        <p><strong>Ciri-ciri perubahan fisika:</strong></p>
+        <ul>
+            <li>Tidak terbentuk zat baru</li>
+            <li>Hanya berubah wujud, bentuk, atau ukuran</li>
+            <li>Dapat dikembalikan ke bentuk semula (reversibel)</li>
+        </ul>
+        <p><strong>Contoh:</strong></p>
+        <ul>
+            <li>Es mencair menjadi air</li>
+            <li>Air menguap menjadi uap air</li>
+            <li>Gula dilarutkan dalam air</li>
+            <li>Besi dipanaskan hingga membara</li>
+            <li>Kayu dibuat menjadi meja</li>
+            <li>Kertas disobek-sobek</li>
+        </ul>
+
+        <h3>2. Perubahan Kimia</h3>
+        <p>
+            <strong>Perubahan kimia</strong> adalah perubahan zat yang <strong>menghasilkan zat baru</strong> 
+            dengan sifat kimia yang berbeda dari zat asalnya.
+        </p>
+        <p><strong>Ciri-ciri perubahan kimia:</strong></p>
+        <ul>
+            <li>Terbentuk zat baru dengan sifat berbeda</li>
+            <li>Tidak dapat dikembalikan ke bentuk semula (irreversibel)</li>
+            <li>Diikuti perubahan warna, suhu, terbentuk gas, atau endapan</li>
+        </ul>
+        <p><strong>Contoh:</strong></p>
+        <ul>
+            <li>Besi berkarat (Fe + O₂ → Fe₂O₃)</li>
+            <li>Kayu dibakar menjadi abu</li>
+            <li>Makanan membusuk</li>
+            <li>Susu menjadi masam</li>
+            <li>Buah matang (fermentasi)</li>
+            <li>Fotosintesis pada tumbuhan</li>
+            <li>Pencernaan makanan dalam tubuh</li>
+        </ul>
+
+        <h3>Tabel Perbandingan Perubahan Fisika dan Kimia:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aspek</th>
+                    <th>Perubahan Fisika</th>
+                    <th>Perubahan Kimia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Zat Baru</strong></td>
+                    <td>Tidak terbentuk</td>
+                    <td>Terbentuk</td>
+                </tr>
+                <tr>
+                    <td><strong>Sifat Kimia</strong></td>
+                    <td>Tetap sama</td>
+                    <td>Berubah</td>
+                </tr>
+                <tr>
+                    <td><strong>Kembali ke Awal</strong></td>
+                    <td>Mudah (reversibel)</td>
+                    <td>Sulit (irreversibel)</td>
+                </tr>
+                <tr>
+                    <td><strong>Contoh</strong></td>
+                    <td>Es mencair, gula larut</td>
+                    <td>Besi berkarat, kayu terbakar</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>G. Campuran dan Jenisnya</h2>
+
+        <p>
+            <strong>Campuran</strong> adalah gabungan dua zat atau lebih yang masih memiliki sifat asalnya 
+            dan dapat dipisahkan secara fisika.
+        </p>
+
+        <h3>Jenis-Jenis Campuran:</h3>
+
+        <h3>1. Campuran Homogen (Larutan)</h3>
+        <p>
+            Campuran homogen adalah campuran yang partikel-partikelnya tersebar merata sehingga 
+            <strong>tidak dapat dibedakan</strong> antara zat pelarut dan zat terlarut.
+        </p>
+        <p><strong>Ciri-ciri:</strong></p>
+        <ul>
+            <li>Tampak sebagai satu fase (seragam)</li>
+            <li>Partikel sangat kecil (< 1 nm)</li>
+            <li>Tidak dapat disaring</li>
+            <li>Tidak memisah jika didiamkan</li>
+        </ul>
+        <p><strong>Contoh:</strong> air gula, air garam, teh manis, sirup, udara, alkohol 70%</p>
+
+        <h3>2. Campuran Heterogen</h3>
+        <p>
+            Campuran heterogen adalah campuran yang partikel-partikelnya <strong>tidak tersebar merata</strong> 
+            sehingga masih dapat dibedakan antara komponen-komponennya.
+        </p>
+        <p><strong>Ciri-ciri:</strong></p>
+        <ul>
+            <li>Tampak lebih dari satu fase</li>
+            <li>Partikel lebih besar</li>
+            <li>Dapat disaring</li>
+            <li>Dapat memisah jika didiamkan</li>
+        </ul>
+        <p>Campuran heterogen dibedakan menjadi dua:</p>
+        <ul>
+            <li><strong>Koloid:</strong> partikel berukuran 1–100 nm, tampak homogen tetapi sebenarnya heterogen. 
+            Contoh: susu, santan, kabut, asap, mentega, agar-agar</li>
+            <li><strong>Suspensi:</strong> partikel berukuran > 100 nm, tampak keruh dan dapat mengendap. 
+            Contoh: air sungai keruh, air kapur, pasir dalam air</li>
+        </ul>
+
+        <h2>H. Pemisahan Campuran</h2>
+
+        <p>
+            Campuran dapat dipisahkan menjadi komponen-komponen penyusunnya berdasarkan perbedaan sifat fisika 
+            masing-masing zat. Berikut metode pemisahan campuran:
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Metode</th>
+                    <th>Prinsip</th>
+                    <th>Contoh Penerapan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Filterisasi (Penyaringan)</strong></td>
+                    <td>Berdasarkan perbedaan ukuran partikel</td>
+                    <td>Menyaring pasir dari air, membuat santan</td>
+                </tr>
+                <tr>
+                    <td><strong>Kristalisasi</strong></td>
+                    <td>Penguapan pelarut sehingga zat terlarut mengkristal</td>
+                    <td>Pembuatan garam dari air laut</td>
+                </tr>
+                <tr>
+                    <td><strong>Destilasi (Penyulingan)</strong></td>
+                    <td>Berdasarkan perbedaan titik didih</td>
+                    <td>Memisahkan air dan alkohol, pembuatan minyak atsiri</td>
+                </tr>
+                <tr>
+                    <td><strong>Sublimasi</strong></td>
+                    <td>Perubahan wujud padat langsung ke gas</td>
+                    <td>Memisahkan kapur barus dari campuran</td>
+                </tr>
+                <tr>
+                    <td><strong>Kromatografi</strong></td>
+                    <td>Berdasarkan perbedaan kecepatan merambat</td>
+                    <td>Memisahkan zat warna pada tinta</td>
+                </tr>
+                <tr>
+                    <td><strong>Magnet</strong></td>
+                    <td>Berdasarkan sifat kemagnetan</td>
+                    <td>Memisahkan serbuk besi dari pasir</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <h4>🔬 Aktivitas Praktikum Sederhana:</h4>
+            <p><strong>Pemisahan Campuran Pasir, Garam, dan Besi:</strong></p>
+            <ol>
+                <li>Gunakan <strong>magnet</strong> untuk memisahkan serbuk besi</li>
+                <li>Larutkan sisa campuran dalam <strong>air</strong> (garam larut, pasir tidak)</li>
+                <li><strong>Saring</strong> untuk memisahkan pasir dari air garam</li>
+                <li><strong>Panaskan</strong> air garam hingga air menguap (kristalisasi), tersisa kristal garam</li>
+            </ol>
+        </div>
+
+        <h2>I. Asam, Basa, dan Garam</h2>
+
+        <p>
+            Berdasarkan sifat keasamannya, larutan dibedakan menjadi tiga golongan: <strong>asam, basa, dan garam</strong>.
+        </p>
+
+        <h3>1. Larutan Asam</h3>
+        <p>
+            <strong>Asam</strong> adalah zat yang dalam air menghasilkan ion H⁺ (ion hidrogen).
+        </p>
+        <p><strong>Ciri-ciri asam:</strong></p>
+        <ul>
+            <li>Rasa masam (jangan dicicipi sembarangan!)</li>
+            <li>pH < 7</li>
+            <li>Memerahkan lakmus biru</li>
+            <li>Bersifat korosif (dapat merusak logam dan kulit)</li>
+        </ul>
+        <p><strong>Contoh:</strong> asam cuka (CH₃COOH), asam sitrat (jeruk), asam klorida (HCl), asam sulfat (H₂SO₄)</p>
+
+        <h3>2. Larutan Basa</h3>
+        <p>
+            <strong>Basa</strong> adalah zat yang dalam air menghasilkan ion OH⁻ (ion hidroksida).
+        </p>
+        <p><strong>Ciri-ciri basa:</strong></p>
+        <ul>
+            <li>Rasa pahit dan licin di kulit</li>
+            <li>pH > 7</li>
+            <li>Membirukan lakmus merah</li>
+            <li>Bersifat kaustik (merusak kulit)</li>
+        </ul>
+        <p><strong>Contoh:</strong> sabun, soda api (NaOH), air kapur (Ca(OH)₂), pasta gigi</p>
+
+        <h3>3. Larutan Garam</h3>
+        <p>
+            <strong>Garam</strong> adalah hasil reaksi antara asam dan basa (reaksi netralisasi).
+        </p>
+        <p><strong>Ciri-ciri garam:</strong></p>
+        <ul>
+            <li>pH = 7 (netral)</li>
+            <li>Tidak mengubah warna lakmus</li>
+            <li>Terbentuk dari reaksi: Asam + Basa → Garam + Air</li>
+        </ul>
+        <p><strong>Contoh:</strong> garam dapur (NaCl), garam inggris (MgSO₄), soda kue (NaHCO₃)</p>
+
+        <h3>Indikator Keasaman:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Indikator</th>
+                    <th>Asam</th>
+                    <th>Netral</th>
+                    <th>Basa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Lakmus Merah</strong></td>
+                    <td>Merah</td>
+                    <td>Merah</td>
+                    <td>Biru</td>
+                </tr>
+                <tr>
+                    <td><strong>Lakmus Biru</strong></td>
+                    <td>Merah</td>
+                    <td>Biru</td>
+                    <td>Biru</td>
+                </tr>
+                <tr>
+                    <td><strong>Universal</strong></td>
+                    <td>Merah/Jingga</td>
+                    <td>Hijau</td>
+                    <td>Biru/Ungu</td>
+                </tr>
+                <tr>
+                    <td><strong>pH Meter</strong></td>
+                    <td>pH < 7</td>
+                    <td>pH = 7</td>
+                    <td>pH > 7</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>J. Pemanfaatan Zat dalam Kehidupan Sehari-hari</h2>
+
+        <p>
+            Pemahaman tentang zat dan perubahannya sangat bermanfaat dalam kehidupan sehari-hari, antara lain:
+        </p>
+        <ul>
+            <li><strong>Bidang Kesehatan:</strong> Pembuatan obat, infus, dan cairan antiseptik</li>
+            <li><strong>Bidang Pangan:</strong> Pengawetan makanan, pembuatan tape, tempe, keju</li>
+            <li><strong>Bidang Pertanian:</strong> Penggunaan pupuk, pestisida, dan pengaturan pH tanah</li>
+            <li><strong>Bidang Industri:</strong> Pembuatan plastik, tekstil, bahan bangunan</li>
+            <li><strong>Bidang Lingkungan:</strong> Pengolahan air bersih, daur ulang sampah</li>
+            <li><strong>Bidang Rumah Tangga:</strong> Memasak, mencuci, membersihkan</li>
+        </ul>
+
+        <h2>K. Poin Penting untuk Ujian</h2>
+
+        <div class="exam-tips">
+            <h3>📝 Persiapan Ujian Bab 2:</h3>
+            <ul>
+                <li>Pahami pengertian zat dan ciri-cirinya (memiliki massa dan menempati ruang)</li>
+                <li>Hafalkan sifat-sifat zat padat, cair, dan gas beserta contohnya</li>
+                <li>Pahami perbedaan atom, molekul, dan ion</li>
+                <li>Kuasai 6 jenis perubahan wujud zat (melebur, membeku, menguap, mengembun, menyublim, mengkristal)</li>
+                <li>Bedakan sifat fisika dan sifat kimia dengan contoh konkret</li>
+                <li>Bedakan perubahan fisika dan perubahan kimia</li>
+                <li>Pahami perbedaan campuran homogen (larutan) dan heterogen (koloid, suspensi)</li>
+                <li>Hafalkan 6 metode pemisahan campuran beserta prinsip kerjanya</li>
+                <li>Pahami ciri-ciri asam, basa, dan garam beserta contohnya</li>
+                <li>Kuasai penggunaan indikator lakmus dan skala pH</li>
+                <li>Siapkan contoh pemanfaatan zat dalam kehidupan sehari-hari</li>
+            </ul>
+        </div>
+
+        <div class="quote-box">
+            🌟 <strong>Pesan Penulis:</strong><br>
+            "Segala sesuatu di alam semesta ini tersusun dari zat. Dengan memahami zat dan perubahannya, 
+            kita dapat memanfaatkan alam dengan bijak dan menciptakan kehidupan yang lebih baik. 
+            Jadilah siswa yang kritis dan selalu ingin tahu!"
+        </div>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <a href="index.html" class="btn-home">🏠 Kembali ke Beranda</a>
+        <a href="uji-formatif-2.html" class="btn-quiz">✍️ Uji Formatif Bab 2</a>
+        <a href="3.html" class="btn-next">Bab Selanjutnya →</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>📘 IPA Kelas 7</h4>
+                <p>Buku ajar untuk siswa SMP. Teori, praktik, dan aplikasi dalam Kurikulum Merdeka.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigasi</h4>
+                <a href="index.html">Beranda</a>
+                <a href="index.html#tentang">Tentang Buku</a>
+                <a href="index.html#bab">Daftar Bab</a>
+                <a href="index.html#penulis">Penulis</a>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <a href="mailto:lizaoktavia08@guru.smp.belajar.id">lizaoktavia08@guru.smp.belajar.id</a>
+                <p>UPTD SMP N 4 Kecamatan Lareh Sago Halaban</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Liza Oktavia, S.Pt. Hak cipta dilindungi.</p>
+            <p>Ilmu Pengetahuan Alam Kelas 7 Kurikulum Merdeka Semester 1</p>
+        </div>
+    </footer>
+
+</body>
+</html>

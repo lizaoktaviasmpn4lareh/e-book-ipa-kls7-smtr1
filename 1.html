@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 1 - Hakikat Ilmu Sains dan Metode Ilmiah | IPA Kelas 7 Kurikulum Merdeka</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f4f7fa;
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            background: linear-gradient(135deg, #1a5276, #2e86c1);
+            padding: 15px 20px;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .top-nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-nav .brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .top-nav .links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .top-nav .links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: opacity 0.3s;
+        }
+
+        .top-nav .links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #eaf2f8;
+            padding: 12px 20px;
+            font-size: 0.9rem;
+            color: #555;
+            border-bottom: 1px solid #d4e6f1;
+        }
+
+        .breadcrumb a {
+            color: #2e86c1;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Chapter Header */
+        .chapter-header {
+            background: linear-gradient(135deg, #1a5276 0%, #2e86c1 50%, #48c9b0 100%);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .chapter-header .chapter-label {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .chapter-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        .chapter-header .description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 25px 20px;
+            background: #fff;
+            border-bottom: 1px solid #e8e8e8;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .action-buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-home {
+            background: #1a5276;
+            color: #fff;
+        }
+
+        .btn-home:hover {
+            background: #0e2f44;
+            transform: translateY(-2px);
+        }
+
+        .btn-quiz {
+            background: #f39c12;
+            color: #fff;
+        }
+
+        .btn-quiz:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+        }
+
+        .btn-next {
+            background: #27ae60;
+            color: #fff;
+        }
+
+        .btn-next:hover {
+            background: #229954;
+            transform: translateY(-2px);
+        }
+
+        /* Content */
+        .content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .content h2 {
+            color: #1a5276;
+            font-size: 1.6rem;
+            margin: 35px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #2e86c1;
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content h3 {
+            color: #2e86c1;
+            font-size: 1.25rem;
+            margin: 25px 0 12px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #444;
+        }
+
+        .content ul, .content ol {
+            margin: 15px 0 15px 25px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .content strong {
+            color: #1a5276;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, #eaf2f8, #d4efdf);
+            border-left: 5px solid #2e86c1;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .info-box h4 {
+            color: #1a5276;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .info-box ul {
+            margin-left: 20px;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background: #fef9e7;
+            border-left: 5px solid #f39c12;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #7d6608;
+        }
+
+        /* Exam Tips */
+        .exam-tips {
+            background: linear-gradient(135deg, #fef9e7, #fdebd0);
+            border: 2px solid #f39c12;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .exam-tips h3 {
+            color: #e67e22;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .exam-tips ul {
+            margin-left: 20px;
+        }
+
+        .exam-tips li {
+            margin-bottom: 10px;
+        }
+
+        /* Table */
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .content table th {
+            background: linear-gradient(135deg, #1a5276, #2e86c1);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .content table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .content table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .content table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            max-width: 1000px;
+            margin: 0 auto 40px;
+            padding: 25px 40px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .bottom-nav a {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        /* Footer */
+        footer {
+            background: #0e2f44;
+            color: #ccc;
+            padding: 40px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-section a:hover {
+            color: #f39c12;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .chapter-header h1 {
+                font-size: 1.7rem;
+            }
+
+            .content {
+                padding: 25px 20px;
+                margin: 20px 15px;
+            }
+
+            .content h2 {
+                font-size: 1.3rem;
+            }
+
+            .bottom-nav {
+                flex-direction: column;
+                margin: 0 15px 20px;
+                padding: 20px;
+            }
+
+            .bottom-nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="brand">📘 IPA Kelas 7 Kurikulum Merdeka</div>
+            <div class="links">
+                <a href="index.html">Beranda</a>
+                <a href="index.html#tentang">Tentang Buku</a>
+                <a href="index.html#bab">Daftar Bab</a>
+                <a href="index.html#penulis">Penulis</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">🏠 Beranda</a> &nbsp;|&nbsp;
+        <a href="index.html#bab">📖 Daftar Bab</a> &nbsp;|&nbsp;
+        <strong>Bab 1</strong>
+    </div>
+
+    <!-- Chapter Header -->
+    <section class="chapter-header">
+        <span class="chapter-label">BAB 1</span>
+        <h1>Hakikat Ilmu Sains dan Metode Ilmiah</h1>
+        <p class="description">
+            Mengenal Ilmu Pengetahuan Alam sebagai cabang ilmu yang mempelajari alam semesta beserta gejalanya, 
+            serta memahami langkah-langkah metode ilmiah sebagai cara sistematis untuk memecahkan masalah dan menemukan kebenaran.
+        </p>
+    </section>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <a href="index.html" class="btn-home">🏠 Beranda</a>
+        <a href="uji-formatif-1.html" class="btn-quiz">📝 Uji Formatif Bab 1</a>
+        <a href="2.html" class="btn-next">Bab Selanjutnya →</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <p>
+            Selamat datang di bab pertama buku <strong>Ilmu Pengetahuan Alam (IPA) Kelas 7 Kurikulum Merdeka</strong>! 
+            Pada bab ini, kalian akan mempelajari hakikat IPA sebagai ilmu pengetahuan, objek kajian IPA, 
+            serta cara kerja para ilmuwan dalam memecahkan masalah melalui <strong>metode ilmiah</strong>. 
+            Pemahaman ini akan menjadi fondasi penting bagi kalian untuk mempelajari bab-bab selanjutnya.
+        </p>
+
+        <h2>A. Pengertian Ilmu Pengetahuan Alam (IPA)</h2>
+
+        <p>
+            <strong>Ilmu Pengetahuan Alam (IPA)</strong> atau dalam bahasa Inggris disebut <em>Natural Science</em> 
+            adalah ilmu yang mempelajari tentang alam semesta beserta segala isinya. IPA mempelajari gejala-gejala 
+            alam yang terjadi di sekitar kita secara sistematis, logis, dan berdasarkan fakta yang dapat diobservasi.
+        </p>
+
+        <p>
+            Secara etimologis, kata "sains" berasal dari bahasa Latin <em>"scientia"</em> yang berarti pengetahuan. 
+            IPA merupakan kumpulan pengetahuan yang tersusun secara sistematis tentang alam dan fenomena yang terjadi di dalamnya.
+        </p>
+
+        <div class="info-box">
+            <h4>📌 Ciri-Ciri Ilmu Pengetahuan Alam:</h4>
+            <ul>
+                <li><strong>Objektif</strong> – Berdasarkan fakta, bukan pendapat atau perasaan pribadi</li>
+                <li><strong>Sistematis</strong> – Disusun secara teratur dan saling berkaitan</li>
+                <li><strong>Universal</strong> – Berlaku umum di mana saja dan kapan saja</li>
+                <li><strong>Empiris</strong> – Diperoleh melalui pengamatan dan percobaan</li>
+                <li><strong>Analitis</strong> – Mempelajari bagian-bagian dari suatu keseluruhan</li>
+                <li><strong>Verifikatif</strong> – Dapat diuji kebenarannya oleh orang lain</li>
+            </ul>
+        </div>
+
+        <h3>Definisi IPA Menurut Para Ahli:</h3>
+        <ul>
+            <li><strong>Arthur G. Waksman:</strong> IPA adalah pengetahuan yang diperoleh melalui proses penyelidikan (inquiry) yang sistematis terhadap alam.</li>
+            <li><strong>Harry Firman:</strong> IPA adalah ilmu yang mempelajari tentang alam semesta dan gejala-gejalanya secara sistematis.</li>
+            <li><strong>BSCS (Biological Science Curriculum Study):</strong> IPA adalah pengetahuan yang tersusun secara sistematis tentang alam dan gejala-gejala alam.</li>
+        </ul>
+
+        <h2>B. Objek Kajian IPA</h2>
+
+        <p>
+            IPA memiliki objek kajian yang sangat luas, yaitu seluruh alam semesta beserta gejalanya. 
+            Objek kajian IPA dapat dikelompokkan menjadi dua, yaitu:
+        </p>
+
+        <h3>1. Objek Biotik (Makhluk Hidup)</h3>
+        <p>Objek biotik adalah segala sesuatu yang memiliki ciri-ciri kehidupan, antara lain:</p>
+        <ul>
+            <li>Tumbuhan (tumbuhan berbunga, tumbuhan paku, lumut)</li>
+            <li>Hewan (vertebrata dan avertebrata)</li>
+            <li>Mikroorganisme (bakteri, jamur, protozoa)</li>
+            <li>Manusia</li>
+        </ul>
+
+        <h3>2. Objek Abiotik (Benda Tak Hidup)</h3>
+        <p>Objek abiotik adalah segala sesuatu yang tidak memiliki ciri-ciri kehidupan, antara lain:</p>
+        <ul>
+            <li>Batuan dan mineral</li>
+            <li>Air, udara, dan tanah</li>
+            <li>Cahaya, suhu, dan kelembapan</li>
+            <li>Fenomena alam seperti pelangi, petir, dan gempa bumi</li>
+        </ul>
+
+        <div class="quote-box">
+            💡 <strong>Tahukah kamu?</strong> IPA tidak hanya mempelajari apa yang ada di alam, tetapi juga 
+            bagaimana cara alam bekerja. Itulah sebabnya IPA sering disebut sebagai ilmu yang "hidup" 
+            karena terus berkembang seiring ditemukannya fakta-fakta baru.
+        </div>
+
+        <h2>C. Cabang-Cabang Ilmu Pengetahuan Alam</h2>
+
+        <p>
+            IPA terdiri dari beberapa cabang ilmu yang mempelajari aspek tertentu dari alam. 
+            Berikut adalah cabang-cabang utama IPA:
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Cabang Ilmu</th>
+                    <th>Objek Kajian</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Biologi</strong></td>
+                    <td>Mempelajari makhluk hidup dan proses kehidupannya</td>
+                </tr>
+                <tr>
+                    <td><strong>Fisika</strong></td>
+                    <td>Mempelajari materi, energi, gaya, gerak, cahaya, dan bunyi</td>
+                </tr>
+                <tr>
+                    <td><strong>Kimia</strong></td>
+                    <td>Mempelajari susunan, sifat, dan perubahan zat</td>
+                </tr>
+                <tr>
+                    <td><strong>Astronomi</strong></td>
+                    <td>Mempelajari benda-benda langit dan alam semesta</td>
+                </tr>
+                <tr>
+                    <td><strong>Geologi</strong></td>
+                    <td>Mempelajari bumi, batuan, dan proses pembentukannya</td>
+                </tr>
+                <tr>
+                    <td><strong>Meteorologi</strong></td>
+                    <td>Mempelajari cuaca dan iklim</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>D. Manfaat Mempelajari IPA</h2>
+
+        <p>Mempelajari IPA memberikan banyak manfaat bagi kehidupan manusia, antara lain:</p>
+        <ol>
+            <li><strong>Memahami alam sekitar</strong> – Siswa dapat memahami fenomena alam yang terjadi di lingkungan sekitar.</li>
+            <li><strong>Mengembangkan berpikir kritis</strong> – Melatih kemampuan berpikir logis, analitis, dan sistematis.</li>
+            <li><strong>Memecahkan masalah</strong> – Memberikan keterampilan untuk memecahkan masalah dalam kehidupan sehari-hari.</li>
+            <li><strong>Menciptakan teknologi</strong> – Menjadi dasar penemuan teknologi yang memudahkan kehidupan manusia.</li>
+            <li><strong>Melestarikan lingkungan</strong> – Memahami pentingnya menjaga keseimbangan alam.</li>
+            <li><strong>Meningkatkan kualitas hidup</strong> – Penerapan IPA dalam bidang kesehatan, pertanian, dan industri.</li>
+        </ol>
+
+        <h2>E. Metode Ilmiah</h2>
+
+        <p>
+            <strong>Metode ilmiah</strong> adalah cara sistematis yang digunakan oleh para ilmuwan untuk memecahkan masalah 
+            dan menemukan kebenaran dalam ilmu pengetahuan. Metode ilmiah bersifat objektif, logis, dan berdasarkan bukti.
+        </p>
+
+        <h3>Langkah-Langkah Metode Ilmiah:</h3>
+
+        <ol>
+            <li>
+                <strong>Mengamati (Observasi)</strong><br>
+                Mengamati fenomena alam secara langsung menggunakan pancaindra atau alat bantu untuk menemukan masalah.
+            </li>
+            <li>
+                <strong>Merumuskan Masalah</strong><br>
+                Menentukan pertanyaan atau masalah yang akan dipecahkan, biasanya dalam bentuk pertanyaan. 
+                Contoh: "Apakah cahaya matahari mempengaruhi pertumbuhan tanaman?"
+            </li>
+            <li>
+                <strong>Mengajukan Hipotesis</strong><br>
+                Membuat dugaan sementara atau jawaban sementara terhadap masalah yang dirumuskan. 
+                Contoh: "Cahaya matahari mempengaruhi pertumbuhan tanaman."
+            </li>
+            <li>
+                <strong>Merancang dan Melakukan Percobaan (Eksperimen)</strong><br>
+                Melakukan percobaan untuk menguji hipotesis. Dalam percobaan terdapat:
+                <ul>
+                    <li><strong>Variabel bebas:</strong> Faktor yang diubah (misalnya: intensitas cahaya)</li>
+                    <li><strong>Variabel terikat:</strong> Faktor yang diukur (misalnya: tinggi tanaman)</li>
+                    <li><strong>Variabel kontrol:</strong> Faktor yang dibuat tetap (misalnya: jenis tanah, jumlah air)</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Mengumpulkan dan Menganalisis Data</strong><br>
+                Mengumpulkan hasil percobaan, kemudian menganalisis data secara statistik atau kualitatif.
+            </li>
+            <li>
+                <strong>Menarik Kesimpulan</strong><br>
+                Menyimpulkan hasil percobaan, apakah hipotesis diterima atau ditolak berdasarkan data yang diperoleh.
+            </li>
+            <li>
+                <strong>Mengkomunikasikan Hasil</strong><br>
+                Melaporkan hasil penelitian kepada orang lain melalui tulisan, presentasi, atau publikasi ilmiah.
+            </li>
+        </ol>
+
+        <div class="info-box">
+            <h4>🔬 Contoh Penerapan Metode Ilmiah:</h4>
+            <p><strong>Masalah:</strong> Mengapa tanaman di tempat gelap tumbuh lebih tinggi tetapi pucat?</p>
+            <ul>
+                <li><strong>Hipotesis:</strong> Tanaman di tempat gelap mengalami etiolasi (pertumbuhan cepat tanpa klorofil).</li>
+                <li><strong>Percobaan:</strong> Menanam dua kelompok kacang hijau, satu di tempat terang dan satu di tempat gelap.</li>
+                <li><strong>Hasil:</strong> Tanaman di tempat gelap tumbuh lebih tinggi tetapi daunnya kuning.</li>
+                <li><strong>Kesimpulan:</strong> Cahaya matahari diperlukan untuk pembentukan klorofil.</li>
+            </ul>
+        </div>
+
+        <h2>F. Sikap Ilmiah</h2>
+
+        <p>
+            Seorang ilmuwan harus memiliki sikap ilmiah dalam melakukan penelitian. Sikap ilmiah yang harus dimiliki antara lain:
+        </p>
+
+        <ol>
+            <li><strong>Jujur</strong> – Melaporkan data apa adanya, tidak memanipulasi hasil.</li>
+            <li><strong>Teliti</strong> – Melakukan pengamatan dan percobaan dengan cermat.</li>
+            <li><strong>Objektif</strong> – Berdasarkan fakta, bukan perasaan pribadi.</li>
+            <li><strong>Tekun</strong> – Tidak mudah menyerah dalam melakukan penelitian.</li>
+            <li><strong>Kreatif</strong> – Mampu menemukan cara baru dalam memecahkan masalah.</li>
+            <li><strong>Terbuka</strong> – Menerima pendapat dan kritik dari orang lain.</li>
+            <li><strong>Bertanggung jawab</strong> – Mempertanggungjawabkan hasil penelitiannya.</li>
+            <li><strong>Rasa ingin tahu</strong> – Selalu bertanya dan mencari tahu tentang fenomena alam.</li>
+        </ol>
+
+        <h2>G. Keselamatan Kerja di Laboratorium</h2>
+
+        <p>
+            Laboratorium adalah tempat untuk melakukan percobaan dan penelitian. 
+            Dalam bekerja di laboratorium, siswa harus memperhatikan <strong>keselamatan kerja</strong> untuk menghindari kecelakaan.
+        </p>
+
+        <h3>Aturan Keselamatan Kerja di Laboratorium:</h3>
+        <ul>
+            <li>Menggunakan jas laboratorium saat bekerja</li>
+            <li>Menggunakan alat pelindung diri (sarung tangan, kacamata pelindung, masker)</li>
+            <li>Tidak makan, minum, atau bercanda di laboratorium</li>
+            <li>Membaca label bahan kimia dengan teliti sebelum digunakan</li>
+            <li>Tidak mencium bahan kimia secara langsung</li>
+            <li>Menyimpan alat dan bahan pada tempatnya setelah digunakan</li>
+            <li>Menjaga kebersihan laboratorium</li>
+            <li>Mengetahui lokasi alat pemadam kebakaran dan kotak P3K</li>
+            <li>Melaporkan segera jika terjadi kecelakaan atau tumpahan bahan kimia</li>
+        </ul>
+
+        <h3>Simbol-Simbol Bahan Kimia Berbahaya:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Simbol</th>
+                    <th>Arti</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>☠️</td>
+                    <td><strong>Beracun (Toxic)</strong> – Dapat menyebabkan kematian jika tertelan, terhirup, atau terserap kulit</td>
+                </tr>
+                <tr>
+                    <td>🔥</td>
+                    <td><strong>Mudah terbakar (Flammable)</strong> – Mudah terbakar oleh api</td>
+                </tr>
+                <tr>
+                    <td>💥</td>
+                    <td><strong>Meledak (Explosive)</strong> – Dapat meledak pada kondisi tertentu</td>
+                </tr>
+                <tr>
+                    <td>⚠️</td>
+                    <td><strong>Korosif (Corrosive)</strong> – Dapat merusak jaringan kulit atau logam</td>
+                </tr>
+                <tr>
+                    <td>☢️</td>
+                    <td><strong>Radiaktif (Radioactive)</strong> – Memancarkan radiasi berbahaya</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>H. Alat-Alat Laboratorium</h2>
+
+        <p>
+            Dalam melakukan percobaan IPA, siswa akan menggunakan berbagai alat laboratorium. 
+            Berikut adalah beberapa alat laboratorium yang sering digunakan:
+        </p>
+
+        <ul>
+            <li><strong>Gelas ukur</strong> – Untuk mengukur volume zat cair</li>
+            <li><strong>Tabung reaksi</strong> – Tempat mereaksikan zat dalam jumlah kecil</li>
+            <li><strong>Mikroskop</strong> – Untuk mengamati benda yang sangat kecil</li>
+            <li><strong>Termometer</strong> – Untuk mengukur suhu</li>
+            <li><strong>Neraca/Ohauss</strong> – Untuk mengukur massa benda</li>
+            <li><strong>Pipet</strong> – Untuk memindahkan cairan dalam jumlah kecil</li>
+            <li><strong>Pembakar Bunsen</strong> – Untuk memanaskan zat</li>
+            <li><strong>Lup (kaca pembesar)</strong> – Untuk mengamati benda kecil</li>
+            <li><strong>Stopwatch</strong> – Untuk mengukur waktu</li>
+        </ul>
+
+        <h2>I. Pengukuran dalam IPA</h2>
+
+        <p>
+            <strong>Pengukuran</strong> adalah kegiatan membandingkan suatu besaran dengan satuan yang ditetapkan sebagai acuan. 
+            Dalam IPA, pengukuran sangat penting untuk memperoleh data yang akurat.
+        </p>
+
+        <h3>Besaran Pokok dan Satuannya (Satuan Internasional/SI):</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Besaran Pokok</th>
+                    <th>Satuan SI</th>
+                    <th>Alat Ukur</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Panjang</td>
+                    <td>Meter (m)</td>
+                    <td>Mistar, jangka sorong, mikrometer</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Massa</td>
+                    <td>Kilogram (kg)</td>
+                    <td>Neraca</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Waktu</td>
+                    <td>Detik/Sekon (s)</td>
+                    <td>Stopwatch, jam</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Suhu</td>
+                    <td>Kelvin (K)</td>
+                    <td>Termometer</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Kuat Arus</td>
+                    <td>Ampere (A)</td>
+                    <td>Amperemeter</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Intensitas Cahaya</td>
+                    <td>Kandela (cd)</td>
+                    <td>Luxmeter</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Jumlah Zat</td>
+                    <td>Mol (mol)</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <h4>📏 Besaran Turunan:</h4>
+            <p>
+                Besaran turunan adalah besaran yang diturunkan dari besaran pokok. Contohnya:
+            </p>
+            <ul>
+                <li><strong>Luas</strong> = panjang × lebar (m²)</li>
+                <li><strong>Volume</strong> = panjang × lebar × tinggi (m³)</li>
+                <li><strong>Kecepatan</strong> = jarak / waktu (m/s)</li>
+                <li><strong>Massa Jenis</strong> = massa / volume (kg/m³)</li>
+            </ul>
+        </div>
+
+        <h2>J. Poin Penting untuk Ujian</h2>
+
+        <div class="exam-tips">
+            <h3>📝 Persiapan Ujian Bab 1:</h3>
+            <ul>
+                <li>Pahami pengertian IPA dan ciri-ciri ilmu pengetahuan alam</li>
+                <li>Bedakan objek biotik dan abiotik dengan contoh konkretnya</li>
+                <li>Hafalkan 7 langkah metode ilmiah secara berurutan</li>
+                <li>Pahami perbedaan variabel bebas, terikat, dan kontrol dalam percobaan</li>
+                <li>Kuasai 8 sikap ilmiah yang harus dimiliki seorang ilmuwan</li>
+                <li>Kenali simbol-simbol bahan kimia berbahaya di laboratorium</li>
+                <li>Hafalkan 7 besaran pokok beserta satuan SI dan alat ukurnya</li>
+                <li>Pahami perbedaan besaran pokok dan besaran turunan</li>
+                <li>Siapkan contoh penerapan metode ilmiah dalam kehidupan sehari-hari</li>
+                <li>Pahami pentingnya keselamatan kerja di laboratorium</li>
+            </ul>
+        </div>
+
+        <div class="quote-box">
+            🌟 <strong>Pesan Penulis:</strong><br>
+            "IPA adalah cara kita memahami keindahan ciptaan Tuhan. Dengan mempelajari IPA, 
+            kita tidak hanya menjadi lebih pintar, tetapi juga lebih dekat dengan Sang Pencipta. 
+            Selamat belajar dan jadilah ilmuwan muda yang jujur, tekun, dan bertanggung jawab!"
+        </div>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <a href="index.html" class="btn-home">🏠 Kembali ke Beranda</a>
+        <a href="uji-formatif-1.html" class="btn-quiz">✍️ Uji Formatif Bab 1</a>
+        <a href="2.html" class="btn-next">Bab Selanjutnya →</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>📘 IPA Kelas 7</h4>
+                <p>Buku ajar untuk siswa SMP. Teori, praktik, dan aplikasi dalam Kurikulum Merdeka.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigasi</h4>
+                <a href="index.html">Beranda</a>
+                <a href="index.html#tentang">Tentang Buku</a>
+                <a href="index.html#bab">Daftar Bab</a>
+                <a href="index.html#penulis">Penulis</a>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <a href="mailto:lizaoktavia08@guru.smp.belajar.id">lizaoktavia08@guru.smp.belajar.id</a>
+                <p>UPTD SMP N 4 Kecamatan Lareh Sago Halaban</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Liza Oktavia, S.Pt. Hak cipta dilindungi.</p>
+            <p>Ilmu Pengetahuan Alam Kelas 7 Kurikulum Merdeka Semester 1</p>
+        </div>
+    </footer>
+
+</body>
+</html>
